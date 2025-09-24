@@ -47,7 +47,7 @@ const BookADemo = () => {
 className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-              style={{position:"absolute", left:12, top:12, zIndex:5}}
+style={{position:"absolute", left:6, top:6, zIndex:5}}
             ></button>
             <div className="row g-0 w-100 h-100">
               {/* Left: form */}
