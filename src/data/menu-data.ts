@@ -13,7 +13,7 @@ const menu_data: IMenu[] = [
   },
   {
     id: 3,
-    link: "/",
+    link: "/product",
     title: "Products",
     sub_dropdown: true,
     dropdown_submenus: [

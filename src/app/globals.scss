@@ -92,3 +92,10 @@ top spacing
   }
 .theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
 }
+.entry-popup-dialog{ max-width:min(96vw,1200px); margin:1.25rem auto; }
+.entry-popup-content{ border-radius:16px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,.2); }
+.entry-popup-dismiss{ width:100%; border:0; background:#6c757d; color:#fff; padding:12px 14px; font-size:14px; }
+@media (max-width: 575.98px){
+  .entry-popup-dialog{ max-width:96vw; margin:.75rem auto; }
+  .entry-popup-dismiss{ padding:10px 12px; font-size:13px; }
+}

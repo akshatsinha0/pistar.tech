@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Newsletter from "../forms/newsletter";
 import Image from "next/image";
-import img4 from "@/assets/images/pistar/popup.jpeg";
+
+const POPUP_BANNER_SRC = "/MY_IMAGE/upcomingEventBanner.png";
 
 const ImgPopUp = () => {
   const [showModal, setShowModal] = useState(false);
@@ -37,46 +38,32 @@ const ImgPopUp = () => {
           tabIndex={-1}
           aria-hidden="true"
         >
-          <div className="modal-dialog modal-fullscreen modal-dialog-centered mb-10 mt-10">
-            <div className="container d-flex align-items-center justify-content-center">
-              <div
-                className="user-data-form modal-content"
-                style={{
-                  boxShadow: "2px 5px 20px rgba(0, 0, 0, 0.1)",
-                  maxWidth: "fit-content",
-                }}
-              >
-                <div className="main-wrapper bottom-border">
-                  <div
-                    className="row"
-                    style={{
-                      padding: "0px", 
-                    }}
-                  >
-                    <div className="col-12">
-                      <Image
-                        src={img4}
-                        alt="cgb aboutus"
-                        width={500}
-                        height={500}
-                        className="rounded"
-                      ></Image>
-                    </div>
-                  </div>
-                </div>
+          <div className="modal-dialog modal-dialog-centered entry-popup-dialog">
+            <div className="entry-popup-content modal-content p-0">
+              <div className="position-relative">
+                <Image
+                  src={POPUP_BANNER_SRC}
+                  alt="Upcoming event banner"
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 1200px) 96vw, 1200px"
+                  style={{width:"100%",height:"auto",display:"block"}}
+                  priority
+                />
                 <button
                   type="button"
-                  className="btn-close"
+                  className="btn-close position-absolute"
                   aria-label="Close"
                   onClick={handleClose}
-                ></button>
-                <button
-                  className="mt-3 btn btn-secondary"
-                  onClick={handleDontShowAgain}
-                >
-                  Don&apos;t show this again
-                </button>
+                  style={{right:8,top:8,filter:"invert(1)"}}
+                />
               </div>
+              <button
+                className="entry-popup-dismiss"
+                onClick={handleDontShowAgain}
+              >
+                Don&apos;t show this again
+              </button>
             </div>
           </div>
         </div>
