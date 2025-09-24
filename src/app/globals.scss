@@ -77,7 +77,14 @@ top spacing
 .theme-main-menu.fixed .nav-link--active::after {
   background:#fff;
 }
-.theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
+ .theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
+/*responsive: hide underline in mobile/tablet*/
+@media (max-width: 991.98px){
+  .theme-main-menu .nav-link{ transform:none; }
+  .theme-main-menu .nav-link--active{ transform:none; }
+  .theme-main-menu .nav-link::after,
+  .theme-main-menu .nav-link--active::after{ content:none !important; width:0 !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   .theme-main-menu .nav-link,
   .theme-main-menu .nav-link::after {
