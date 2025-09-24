@@ -8,3 +8,44 @@
 @import '../../public/assets/fonts/bootstrap-icons/font.css';
 @import '../../public/assets/fonts/bootstrap-icons/font.css';
 @import '../../public/assets/scss/style.scss';
+//active nav link scss//
+.theme-main-menu .nav-link {
+  position:relative;
+  display:inline-block;
+  text-decoration:none;
+  text-decoration-skip-ink:none;
+  transform:scale(1);
+  transform-origin: center bottom; 
+  transition: transform 180ms ease, color 180ms ease;
+}
+.theme-main-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:4px; 
+  margin:0 auto;
+  height: 2px;
+  width: 0%;
+  background: currentColor;
+  transition: width 180ms ease;
+}
+.theme-main-menu .nav-link--active {
+  font-weight:700;
+  transform: scale(1.2);
+}
+.theme-main-menu .nav-link--active::after {
+  width: 100%;
+}
+//during the sticky period of the nav bar of the page,the line color needs to be white only
+.theme-main-menu.fixed .nav-link--active::after {
+  background:#fff;
+}
+.theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
+@media (prefers-reduced-motion: reduce) {
+  .theme-main-menu .nav-link,
+  .theme-main-menu .nav-link::after {
+    transition: none;
+  }
+.theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
+}
