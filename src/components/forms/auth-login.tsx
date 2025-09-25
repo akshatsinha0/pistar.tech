@@ -141,14 +141,16 @@ const AuthLogin = () => {
               )}
             </div>
           </div>
-          <div className="col-12 d-flex justify-content-between align-items-center">
-            <div>
-              <input type="checkbox" id="remember" />
-              <label htmlFor="remember">Keep me logged in</label>
+          <div className="col-12">
+            <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2 remember-wrap">
+              <div className="form-check m-0">
+                <input className="form-check-input" type="checkbox" id="remember" />
+                <label className="form-check-label" htmlFor="remember">Keep me logged in</label>
+              </div>
+              <Link className="text-decoration-underline" href="#" data-bs-toggle="modal" data-bs-target="#ForgotModal">
+                Forgot Password?
+              </Link>
             </div>
-            <Link href="#" data-bs-toggle="modal" data-bs-target="#ForgotModal">
-              Forgot Password?
-            </Link>
           </div>
           <div className="col-12">
             <button

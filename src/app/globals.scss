@@ -116,6 +116,7 @@ top spacing
 
 /* Ensure visible gap at bottom of login/signup modal */
 #loginModal .social-row{ margin-bottom:24px; }
+#loginModal .remember-wrap{ gap:.375rem; }
 #loginModal .modal-bottom-spacer{ height:24px; }
 #loginModal .modal-scroll-area{ padding-bottom:64px !important; }
 #loginModal .modal-scroll-area::after{ content:""; display:block; height:64px !important; }
