@@ -8,6 +8,7 @@ import Wrapper from "@/layout/wrapper";
 import FooterOne from "@/layout/footer/footer-one";
 import Sidebar from "@/layout/admin/sidebar";
 import withAuth from "@/components/hoc/withAuth";
+import Image from "next/image";
 
 const ImageGallery = () => {
   const [images, setImages] = useState<{ id: string, url: string }[]>([]);
@@ -112,7 +113,7 @@ const ImageGallery = () => {
                   {images.map(image => (
                     <div key={image.id} className="col-md-4">
                       <div className="card">
-                        <img src={image.url} className="card-img-top" alt="Image" />
+<Image src={image.url} alt="Image" width={0} height={0} sizes="(max-width: 768px) 100vw, 33vw" style={{width:'100%',height:'auto'}} className="card-img-top" />
                         <div className="card-body">
                           <button className="btn btn-danger" onClick={() => handleImageDelete(image.id)}>Delete</button>
                           <button className="btn btn-secondary" onClick={() => copyLinkToClipboard(image.url)}>Copy Link</button>

@@ -36,99 +36,147 @@ const NewsDetailsArea = ({ blog }: { blog: IArticle }) => {
                   {/* Rendering content headings and paragraphs dynamically */}
                   {content.map((item, index) => (
                     <div key={index}>
-                      {item.subimg && (
-                        <img
+{item.subimg && (
+                        <Image
                           src={item.subimg.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraphfirst && <p>{item.paragraphfirst}</p>}
                       {item.heading && <h4>{item.heading}</h4>}
-                      {item.subimg0 && (
-                        <img
+{item.subimg0 && (
+                        <Image
                           src={item.subimg0.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paradesc && <h5>{item.paradesc}</h5>}
-                      {item.subimg1 && (
-                        <img
+{item.subimg1 && (
+                        <Image
                           src={item.subimg1.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph && <p>{item.paragraph}</p>}
-                      {item.subimg2 && (
-                        <img
+{item.subimg2 && (
+                        <Image
                           src={item.subimg2.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph2 && <p>{item.paragraph2}</p>}
-                      {item.subimg2 && (
-                        <img
+{item.subimg2 && (
+                        <Image
                           src={item.subimg2.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph3 && <p>{item.paragraph3}</p>}
-                      {item.subimg3 && (
-                        <img
+{item.subimg3 && (
+                        <Image
                           src={item.subimg3.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph4 && <p>{item.paragraph4}</p>}
-                      {item.subimg4 && (
-                        <img
+{item.subimg4 && (
+                        <Image
                           src={item.subimg4.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph5 && <p>{item.paragraph5}</p>}
-                      {item.subimg5 && (
-                        <img
+{item.subimg5 && (
+                        <Image
                           src={item.subimg5.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph6 && <p>{item.paragraph6}</p>}
-                      {item.subimg6 && (
-                        <img
+{item.subimg6 && (
+                        <Image
                           src={item.subimg6.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph7 && <p>{item.paragraph7}</p>}
-                      {item.subimg7 && (
-                        <img
+{item.subimg7 && (
+                        <Image
                           src={item.subimg7.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph9 && <p>{item.paragraph9}</p>}
-                      {item.subimg9 && (
-                        <img
+{item.subimg9 && (
+                        <Image
                           src={item.subimg9.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}
                       {item.paragraph10 && <p>{item.paragraph10}</p>}
-                      {item.subimg10 && (
-                        <img
+{item.subimg10 && (
+                        <Image
                           src={item.subimg10.src}
                           alt="what's new"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          style={{width:'100%',height:'auto'}}
                           className="w-100 h-100 mb-30 mt-30 shadowimg cursor-pointer rounded-1"
                         />
                       )}

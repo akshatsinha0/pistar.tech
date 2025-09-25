@@ -6,8 +6,12 @@
 @import '../../public/assets/fonts/clash-display/css/clash-display.css';
 @import '../../public/assets/fonts/magnita/magnita.css';
 @import '../../public/assets/fonts/bootstrap-icons/font.css';
-@import '../../public/assets/fonts/bootstrap-icons/font.css';
 @import '../../public/assets/scss/style.scss';
+@import './_breakpoints.scss';
+
+
+img,video{ max-width:100%; height:auto; }
+svg{ max-width:100%; height:auto; }
 
 // modal sizing & backdrop for the active modal
 .modal-backdrop.show { background:rgba(0,0,0,0.5); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); opacity:.83; }
@@ -101,11 +105,52 @@ top spacing
 }
 
 /* Back arrow button for modals */
-.btn-back-arrow{ background:transparent; border:0; width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; color:#000; opacity:.85; }
+.btn-back-arrow{ background:transparent; border:0; width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; color:#000; opacity:.85; }
 .btn-back-arrow:hover{ opacity:1; }
-.btn-back-arrow .bi{ font-size:1.25rem; }
+.btn-back-arrow .bi{ font-size:1rem; }
 
 /* CTA arrow animation */
 .btn-cta-arrow{ position:relative; }
 .btn-cta-arrow::after{ content:"\2192"; display:inline-block; margin-left:8px; transform:translateX(-6px); opacity:0; transition:transform .25s ease, opacity .25s ease; }
 .btn-cta-arrow:hover::after{ transform:translateX(0); opacity:1; }
+
+/* Ensure visible gap at bottom of login/signup modal */
+#loginModal .social-row{ margin-bottom:24px; }
+#loginModal .modal-bottom-spacer{ height:24px; }
+#loginModal .modal-scroll-area{ padding-bottom:64px !important; }
+#loginModal .modal-scroll-area::after{ content:""; display:block; height:64px !important; }
+@supports (padding: max(0px)){
+  #loginModal .modal-bottom-spacer{ height:calc(24px + env(safe-area-inset-bottom,0)); }
+  #loginModal .modal-scroll-area{ padding-bottom:calc(64px + env(safe-area-inset-bottom,0)) !important; }
+  #loginModal .modal-scroll-area::after{ height:calc(64px + env(safe-area-inset-bottom,0)) !important; }
+}
+#loginModal .form-wrapper .social-use-btn{
+  width: calc(100% - 16px) !important;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+  margin-bottom: 16px !important;
+  min-height: clamp(44px,5.5vw,48px);
+  padding: 10px 14px;
+}
+@include up($bp-sm){
+  #loginModal .form-wrapper .social-use-btn{
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+  }
+}
+@include up($bp-md){
+  #loginModal .form-wrapper .social-use-btn{
+    width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+}
+@include up($bp-lg){
+  #loginModal .form-wrapper .social-use-btn{
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    margin-bottom: 48px !important;
+  }
+}

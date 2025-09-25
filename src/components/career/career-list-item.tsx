@@ -3,6 +3,7 @@ import React from "react";
 import { IArticle } from "@/types/article-d-t";
 import { ICareer } from "@/types/career-d-t";
 import Link from "next/link";
+import Image from "next/image";
 
 const CareerListItem = ({ blog }: { blog: ICareer }) => {
   // add - after every words present in title 
@@ -19,7 +20,7 @@ const CareerListItem = ({ blog }: { blog: ICareer }) => {
       >
         <Link href={`/career/${dynamiclink}`} className="stretched-link date tran3s">
         {/* {blog.date.split(" ")[0]} {blog.date.split(" ")[1]} */}
-        <img src={blog.img.src} alt="background image"  />
+        <Image src={blog.img.src} alt="background image" width={0} height={0} sizes="100vw" style={{width:'100%',height:'auto'}} />
         </Link>
       </figure>
       <div className="post-data">

@@ -66,9 +66,13 @@ const WebCom1 = () => {
           <div className="border-bottom mt-40 pb-50 sm-pb-30">
             <div className="row">
               <div className="col-lg-6 d-flex wow fadeInUp">
-                <img
+                <Image
                   src="https://www.uplers.com/wp-content/themes/uplers/assets/images/front-end-development-expertise.jpg"
                   alt=""
+                  width={0}
+                  height={0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{width:'100%',height:'auto'}}
                 />
               </div>
               <div

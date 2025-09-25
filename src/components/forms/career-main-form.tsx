@@ -1,14 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-// internal
-import google from '@/assets/images/icon/google.png';
-import facebook from '@/assets/images/icon/facebook.png';
-import RegisterForm from "../forms/register-form";
-import LoginForm from "../forms/login-form";
-import { Auth } from "firebase/auth";
-import AuthLogin from "../forms/auth-login";
-import AuthSignup from "../forms/auth-signup";
 import CareerVendorForm from "./career-vendor-form";
 import CareerJobForm from "./career-job-form";
 

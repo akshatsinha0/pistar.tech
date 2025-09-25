@@ -238,6 +238,7 @@ const AddArticle = () => {
   };
 
     // Debounce the handleQuillChange function to reduce re-renders
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleQuillChange = useCallback(
       debounce((content: string) => {
         setArticle((prevArticle) => ({ ...prevArticle, post_info: content }));

@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import Link from 'next/link';
 // Internal imports
 import icon from '@/assets/images/icon/icon_13.svg';
 import ErrorMsg from '../common/error-msg';

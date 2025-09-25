@@ -190,6 +190,7 @@ const AddNews = () => {
   };
 
   // Debounce the handleQuillChange function to reduce re-renders
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleQuillChange = useCallback(
     debounce((content: string) => {
       setNews((prevNews) => ({ ...prevNews, post_info: content }));

@@ -7,6 +7,8 @@ interface ImageUploadModalProps {
   onImageSelect: (url: string) => void;
 }
 
+import Image from "next/image";
+
 const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
   onImageSelect,
 }) => {
@@ -96,9 +98,13 @@ const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                   <div className="row">
                     {images.map((url) => (
                       <div key={url} className="col-md-4">
-                        <img
+                        <Image
                           src={url}
                           alt="Image"
+                          width={0}
+                          height={0}
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          style={{width:'100%',height:'auto',cursor:'pointer'}}
                           className="img-fluid"
                           onClick={() => {
                             onImageSelect(url);
@@ -108,7 +114,6 @@ const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                               ) as HTMLElement
                             )?.click();
                           }}
-                          style={{ cursor: "pointer" }}
                         />
                       </div>
                     ))}
