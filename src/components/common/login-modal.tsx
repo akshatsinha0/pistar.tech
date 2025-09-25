@@ -51,7 +51,7 @@ style={{position:"absolute", left:6, top:6, zIndex:5}}
               {/* Left: forms */}
               {/*scrollabe features so that the bottom buttoms do not get hidden and cut*/}
               <div className="col-12 col-lg-6 d-flex flex-column h-100 overflow-auto">
-<div className="form-wrapper w-100 p-5 pb-5" style={{maxHeight:"100%"}}>
+<div className="form-wrapper w-100 p-5 pb-5" style={{maxHeight:"100%", paddingBottom:"56px"}}>
                   <ul className="nav nav-tabs border-0 w-100" role="tablist">
                     <li className="nav-item" role="presentation">
                       <button
@@ -110,7 +110,7 @@ style={{position:"absolute", left:6, top:6, zIndex:5}}
                     <span className="pe-3 ps-3 fs-6">OR</span>
                     <div className="line"></div>
                   </div>
-                  <div className="row mb-4 mb-lg-5">
+<div className="row mb-5">
                     <div className="col-sm-6">
                       <Link href="#" className="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
                         <Image src={google} alt="google" />
