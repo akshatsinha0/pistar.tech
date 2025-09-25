@@ -99,3 +99,13 @@ top spacing
   .entry-popup-dialog{ max-width:96vw; margin:.75rem auto; }
   .entry-popup-dismiss{ padding:10px 12px; font-size:13px; }
 }
+
+/* Back arrow button for modals */
+.btn-back-arrow{ background:transparent; border:0; width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; color:#000; opacity:.85; }
+.btn-back-arrow:hover{ opacity:1; }
+.btn-back-arrow .bi{ font-size:1.25rem; }
+
+/* CTA arrow animation */
+.btn-cta-arrow{ position:relative; }
+.btn-cta-arrow::after{ content:"\2192"; display:inline-block; margin-left:8px; transform:translateX(-6px); opacity:0; transition:transform .25s ease, opacity .25s ease; }
+.btn-cta-arrow:hover::after{ transform:translateX(0); opacity:1; }

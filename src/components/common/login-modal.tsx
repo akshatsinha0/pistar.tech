@@ -40,11 +40,13 @@ const LoginModal = () => {
 <div className="user-data-form modal-content p-0" style={{height:"90vh",overflow:"hidden", position:"relative"}}>
             <button
               type="button"
-              className="btn-close"
+              className="btn-back-arrow"
               data-bs-dismiss="modal"
               aria-label="Close"
 style={{position:"absolute", left:6, top:6, zIndex:5}}
-            ></button>
+            >
+              <i className="bi bi-arrow-left"></i>
+            </button>
 <div className="row g-0 h-100">
               {/* Left: forms */}
               {/*scrollabe features so that the bottom buttoms do not get hidden and cut*/}

@@ -44,11 +44,13 @@ const BookADemo = () => {
 <div className="user-data-form modal-content p-0" style={{boxShadow: "2px 5px 20px rgba(0, 0, 0, 0.1)",background: "#EDF1EE",height:"90vh",overflow:"hidden", position:"relative"}} >
           <button
               type="button"
-className="btn-close"
+className="btn-back-arrow"
               data-bs-dismiss="modal"
               aria-label="Close"
 style={{position:"absolute", left:6, top:6, zIndex:5}}
-            ></button>
+            >
+              <i className="bi bi-arrow-left"></i>
+            </button>
             <div className="row g-0 w-100 h-100">
               {/* Left: form */}
               <div className="col-12 col-lg-6 d-flex flex-column h-100 overflow-auto">

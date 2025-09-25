@@ -9,14 +9,25 @@ const ImgPopUp = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    // Check if the user has opted to never show the popup again
-    const noShow = localStorage.getItem("noShowPopup");
-
-    // Only show the popup if the user hasn't opted out
+    // Respect user's opt-out, otherwise show once per day
+    const noShow = localStorage.getItem("noShowPopup") === "true";
+    const lastShown = localStorage.getItem("popupLastShown");
+    let shouldShow = false;
     if (!noShow) {
-      setTimeout(() => {
+      if (!lastShown) shouldShow = true; else {
+        const last = parseInt(lastShown, 10);
+        if (!Number.isNaN(last)) {
+          const DAY = 24*60*60*1000;
+          if (Date.now()-last>DAY) shouldShow=true;
+        } else shouldShow = true;
+      }
+    }
+    if (shouldShow) {
+      const id = window.setTimeout(() => {
         setShowModal(true);
+        localStorage.setItem("popupLastShown", String(Date.now()));
       }, 3000);
+      return () => window.clearTimeout(id);
     }
   }, []);
 
