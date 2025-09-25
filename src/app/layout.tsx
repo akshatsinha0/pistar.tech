@@ -4,11 +4,16 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.scss";
 import { Providers } from "@/redux/provider";
+const ORIGIN=
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
   title: "Advanced Foot Systems Podiatry | Diabetic Foot Care Solutions",
   description:
     "Discover PiStarTech flexible pressure sensor technology designed for diabetic foot care, providing accurate podiatry insights to enhance foot health and prevent complications.",
+
+  metadataBase: new URL(ORIGIN),
 };
 
 export default function RootLayout({
