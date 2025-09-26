@@ -15,7 +15,7 @@ const product_data:IProduct[] = [
     id: 1,
     img: img_1,
     title: "Podiascanner Mat",
-    price: 79999,
+    price: 49999,
     discount: 0,
     category:'books',
     quantity: 38,
