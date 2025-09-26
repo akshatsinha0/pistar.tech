@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // internal
@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 **/
 const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
   const pathname=usePathname();
+  const [openDropdowns, setOpenDropdowns] = useState<{[key: number]: boolean}>({});
 //flash to #4739fd(logs's blue colour') on unhover time, then return to base color once
   const flashTimers=React.useRef(new WeakMap<HTMLElement,number>()).current;
   const handleUnhover=(e: React.MouseEvent<HTMLElement>) => {
@@ -49,6 +50,13 @@ const Navbar = ({ logo_white = false }: { logo_white?: boolean }) => {
       return true;
 
     return false;
+  };
+
+  const toggleDropdown = (menuId: number) => {
+    setOpenDropdowns(prev => ({
+      ...prev,
+      [menuId]: !prev[menuId]
+    }));
   };
 
   return (
@@ -159,12 +167,16 @@ onMouseLeave={handleUnhover}
                   data-bs-auto-close="outside"
                   aria-expanded="false"
 onMouseLeave={handleUnhover}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown(menu.id);
+                  }}
                   {...(active ? { "aria-current": "page" } : {})}
                 >
                   {menu.title}
-                  <i className="bi bi-chevron-down d-lg-none ms-2"></i>
+                  <i className={`bi bi-chevron-down d-lg-none ms-1 dropdown-caret ${openDropdowns[menu.id] ? 'rotated' : ''}`}></i>
                 </a>
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${openDropdowns[menu.id] ? 'show' : ''}`}>
                   {menu.dropdown_submenus?.map((dm: any, i: number) => (
                     <li key={i} className={`${dm.sub_menus ? "dropdown" : ""}`}>
                       {dm.sub_menus ? (

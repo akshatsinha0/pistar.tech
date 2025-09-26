@@ -8,34 +8,90 @@
 @import '../../public/assets/fonts/bootstrap-icons/font.css';
 @import '../../public/assets/scss/style.scss';
 @import './_breakpoints.scss';
-
-
-img,video{ max-width:100%; height:auto; }
-svg{ max-width:100%; height:auto; }
-
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+}
 // modal sizing & backdrop for the active modal
-.modal-backdrop.show { background:rgba(0,0,0,0.5); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); opacity:.83; }
-.modal-dialog.modal-fullscreen { padding: 0 !important; }
-.user-data-form.modal-content { border-radius: 16px; }
-.modal .user-data-form.modal-content{ max-width:100% !important; width:100% !important; margin:0; }
-#loginModal .modal-dialog, #BookDemo .modal-dialog{ --bs-modal-width:75vw; max-width:75vw !important; width:75vw !important; }
-/* Responsive modal sizing */
-@media (max-width: 991.98px){
-  #loginModal .modal-dialog, #BookDemo .modal-dialog{ --bs-modal-width:92vw; max-width:92vw !important; width:92vw !important; }
+.modal-backdrop.show {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  opacity: .83;
 }
-@media (max-width: 575.98px){
-  #loginModal .modal-dialog, #BookDemo .modal-dialog{ --bs-modal-width:96vw; max-width:96vw !important; width:96vw !important; margin-left:auto; margin-right:auto; }
-  #loginModal .form-wrapper, #BookDemo .form-wrapper{ padding:20px !important; }
+.modal-dialog.modal-fullscreen {
+  padding: 0 !important;
 }
+.user-data-form.modal-content {
+  border-radius: 16px;
+}
+.modal .user-data-form.modal-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0;
+}
+#loginModal .modal-dialog,
+#BookDemo .modal-dialog {
+  --bs-modal-width: 75vw;
+  max-width: 75vw !important;
+  width: 75vw !important;
+}
+@media (max-width: 991.98px) {
+
+  #loginModal .modal-dialog,
+  #BookDemo .modal-dialog {
+    --bs-modal-width: 92vw;
+    max-width: 92vw !important;
+    width: 92vw !important;
+  }
+}
+@media (max-width: 575.98px) {
+
+  #loginModal .modal-dialog,
+  #BookDemo .modal-dialog {
+    --bs-modal-width: 96vw;
+    max-width: 96vw !important;
+    width: 96vw !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #loginModal .form-wrapper,
+  #BookDemo .form-wrapper {
+    padding: 20px !important;
+  }
+}
+
 /*
 top spacing
  */
-#loginModal .overflow-auto, #BookDemo .overflow-auto{ -webkit-overflow-scrolling: touch; }
-/*close button sizing in phone*/
-#loginModal .btn-close, #BookDemo .btn-close{ width:.75rem; height:.75rem; padding:.2rem; }
-@media (max-width: 575.98px){
-  #loginModal .btn-close, #BookDemo .btn-close{ width:.7rem; height:.7rem; }
+#loginModal .overflow-auto,
+#BookDemo .overflow-auto {
+  -webkit-overflow-scrolling: touch;
 }
+
+/*close button sizing in phone*/
+#loginModal .btn-close,
+#BookDemo .btn-close {
+  width: .75rem;
+  height: .75rem;
+  padding: .2rem;
+}
+
+@media (max-width: 575.98px) {
+
+  #loginModal .btn-close,
+  #BookDemo .btn-close {
+    width: .7rem;
+    height: .7rem;
+  }
+}
+
 /* Modal video cover layout //
 .modal-video-cover{ position:relative; width:100%; height:100%; overflow:hidden; background:#000; }
 .modal-video-cover .modal-video-iframe{ position:absolute; top:50%; left:50%; transform:translate(-50%,-54%); width:240%; height:130%; border:0; }
@@ -44,111 +100,250 @@ top spacing
 }
 //active nav link scss//
 /* Modal video cover layout */
-.modal-video-cover{ position:relative; width:100%; height:100%; overflow:hidden; background:#000; }
-.modal-video-cover .modal-video-iframe{ position:absolute; top:50%; left:50%; transform:translate(-50%,-54%); width:240%; height:130%; border:0; }
-@media (min-width: 1200px){
-  .modal-video-cover .modal-video-iframe{ width:240%; height:130%; }
+.modal-video-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
 }
+
+.modal-video-cover .modal-video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  width: 240%;
+  height: 130%;
+  border: 0;
+}
+
+@media (min-width: 1200px) {
+  .modal-video-cover .modal-video-iframe {
+    width: 240%;
+    height: 130%;
+  }
+}
+
 .theme-main-menu .nav-link {
-  position:relative;
-  display:inline-block;
-  text-decoration:none;
-  text-decoration-skip-ink:none;
-  transform:scale(1);
-  transform-origin: center bottom; 
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: none;
+  transform: scale(1);
+  transform-origin: center bottom;
   transition: transform 180ms ease, color 180ms ease;
 }
+
 .theme-main-menu .nav-link::after {
   content: "";
   position: absolute;
-  left:0;
-  right:0;
-  bottom:4px; 
-  margin:0 auto;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  margin: 0 auto;
   height: 2px;
   width: 0%;
   background: currentColor;
   transition: width 180ms ease;
 }
+
 .theme-main-menu .nav-link--active {
-  font-weight:700;
+  font-weight: 700;
   transform: scale(1.2);
 }
+
 .theme-main-menu .nav-link--active::after {
   width: 100%;
 }
+
 //during the sticky period of the nav bar of the page,the line color needs to be white only
 .theme-main-menu.fixed .nav-link--active::after {
-  background:#fff;
+  background: #fff;
 }
- .theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
+
+.theme-main-menu .nav-link--unhover-flash {
+  color: #4739fd !important;
+}
+
 /*responsive: hide underline in mobile/tablet*/
-@media (max-width: 991.98px){
-  .theme-main-menu .nav-link{ transform:none; }
-  .theme-main-menu .nav-link--active{ transform:none; }
+@media (max-width: 991.98px) {
+  .theme-main-menu .nav-link {
+    transform: none;
+  }
+
+  .theme-main-menu .nav-link--active {
+    transform: none;
+  }
+
   .theme-main-menu .nav-link::after,
-  .theme-main-menu .nav-link--active::after{ content:none !important; width:0 !important; }
+  .theme-main-menu .nav-link--active::after {
+    content: none !important;
+    width: 0 !important;
+  }
 }
+
 @media (prefers-reduced-motion: reduce) {
+
   .theme-main-menu .nav-link,
   .theme-main-menu .nav-link::after {
     transition: none;
   }
-.theme-main-menu .nav-link--unhover-flash { color:#4739fd !important; }
+
+  .theme-main-menu .nav-link--unhover-flash {
+    color: #4739fd !important;
+  }
 }
-.entry-popup-dialog{ max-width:min(96vw,1200px); margin:1.25rem auto; }
-.entry-popup-content{ border-radius:16px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,.2); }
-.entry-popup-dismiss{ width:100%; border:0; background:#6c757d; color:#fff; padding:12px 14px; font-size:14px; }
-@media (max-width: 575.98px){
-  .entry-popup-dialog{ max-width:96vw; margin:.75rem auto; }
-  .entry-popup-dismiss{ padding:10px 12px; font-size:13px; }
+
+.entry-popup-dialog {
+  max-width: min(96vw, 1200px);
+  margin: 1.25rem auto;
+}
+
+.entry-popup-content {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+}
+
+.entry-popup-dismiss {
+  width: 100%;
+  border: 0;
+  background: #6c757d;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+@media (max-width: 575.98px) {
+  .entry-popup-dialog {
+    max-width: 96vw;
+    margin: .75rem auto;
+  }
+
+  .entry-popup-dismiss {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
 }
 
 /* Back arrow button for modals */
-.btn-back-arrow{ background:transparent; border:0; width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; color:#000; opacity:.85; }
-.btn-back-arrow:hover{ opacity:1; }
-.btn-back-arrow .bi{ font-size:1rem; }
+.btn-back-arrow {
+  background: transparent;
+  border: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  opacity: .85;
+}
+
+.btn-back-arrow:hover {
+  opacity: 1;
+}
+
+.btn-back-arrow .bi {
+  font-size: 1rem;
+}
 
 /* CTA arrow animation */
-.btn-cta-arrow{ position:relative; }
-.btn-cta-arrow::after{ content:"\2192"; display:inline-block; margin-left:8px; transform:translateX(-6px); opacity:0; transition:transform .25s ease, opacity .25s ease; }
-.btn-cta-arrow:hover::after{ transform:translateX(0); opacity:1; }
-
-/* Ensure visible gap at bottom of login/signup modal */
-#loginModal .social-row{ margin-bottom:24px; }
-#loginModal .remember-wrap{ gap:.375rem; }
-#loginModal .modal-bottom-spacer{ height:24px; }
-#loginModal .modal-scroll-area{ padding-bottom:64px !important; }
-#loginModal .modal-scroll-area::after{ content:""; display:block; height:64px !important; }
-@supports (padding: max(0px)){
-  #loginModal .modal-bottom-spacer{ height:calc(24px + env(safe-area-inset-bottom,0)); }
-  #loginModal .modal-scroll-area{ padding-bottom:calc(64px + env(safe-area-inset-bottom,0)) !important; }
-  #loginModal .modal-scroll-area::after{ height:calc(64px + env(safe-area-inset-bottom,0)) !important; }
+.btn-cta-arrow {
+  position: relative;
 }
-#loginModal .form-wrapper .social-use-btn{
+
+.btn-cta-arrow::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 8px;
+  transform: translateX(-6px);
+  opacity: 0;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.btn-cta-arrow:hover::after {
+  transform: translateX(0);
+  opacity: 1;
+}
+.dropdown-caret {
+  font-size: 0.7rem !important;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+  display: inline-block;
+}
+
+.dropdown-caret.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#loginModal .social-row {
+  margin-bottom: 24px;
+}
+
+#loginModal .remember-wrap {
+  gap: .375rem;
+}
+
+#loginModal .modal-bottom-spacer {
+  height: 24px;
+}
+
+#loginModal .modal-scroll-area {
+  padding-bottom: 64px !important;
+}
+
+#loginModal .modal-scroll-area::after {
+  content: "";
+  display: block;
+  height: 64px !important;
+}
+
+@supports (padding: max(0px)) {
+  #loginModal .modal-bottom-spacer {
+    height: calc(24px + env(safe-area-inset-bottom, 0));
+  }
+
+  #loginModal .modal-scroll-area {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0)) !important;
+  }
+
+  #loginModal .modal-scroll-area::after {
+    height: calc(64px + env(safe-area-inset-bottom, 0)) !important;
+  }
+}
+
+#loginModal .form-wrapper .social-use-btn {
   width: calc(100% - 16px) !important;
   margin-left: 8px !important;
   margin-right: 8px !important;
   margin-bottom: 16px !important;
-  min-height: clamp(44px,5.5vw,48px);
+  min-height: clamp(44px, 5.5vw, 48px);
   padding: 10px 14px;
 }
-@include up($bp-sm){
-  #loginModal .form-wrapper .social-use-btn{
+
+@include up($bp-sm) {
+  #loginModal .form-wrapper .social-use-btn {
     width: calc(100% - 24px) !important;
     margin-left: 12px !important;
     margin-right: 12px !important;
   }
 }
-@include up($bp-md){
-  #loginModal .form-wrapper .social-use-btn{
+
+@include up($bp-md) {
+  #loginModal .form-wrapper .social-use-btn {
     width: calc(100% - 32px) !important;
     margin-left: 16px !important;
     margin-right: 16px !important;
   }
 }
-@include up($bp-lg){
-  #loginModal .form-wrapper .social-use-btn{
+
+@include up($bp-lg) {
+  #loginModal .form-wrapper .social-use-btn {
     width: calc(100% - 24px) !important;
     margin-left: 12px !important;
     margin-right: 12px !important;
