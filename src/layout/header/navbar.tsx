@@ -162,6 +162,7 @@ onMouseLeave={handleUnhover}
                   {...(active ? { "aria-current": "page" } : {})}
                 >
                   {menu.title}
+                  <i className="bi bi-chevron-down d-lg-none ms-2"></i>
                 </a>
                 <ul className="dropdown-menu">
                   {menu.dropdown_submenus?.map((dm: any, i: number) => (
