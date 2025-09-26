@@ -281,6 +281,14 @@ top spacing
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.collapse {
+  transition: height 0.3s ease-in-out !important;
+}
+
+.collapsing {
+  transition: height 0.3s ease-in-out !important;
+}
+
 #loginModal .social-row {
   margin-bottom: 24px;
 }
