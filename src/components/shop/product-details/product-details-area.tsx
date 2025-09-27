@@ -10,6 +10,7 @@ import { add_cart_product, decrement, increment } from "@/redux/features/cart";
 import { add_to_wishlist } from "@/redux/features/wishlist";
 import { calculateDiscountedPrice } from "@/utils/utils";
 import { auth } from "@/database/firebase"; // Import Firebase auth
+import Odometer from "@/components/ui/Odometer";
 
 const ProductDetailsArea = ({ product }: { product: IProduct }) => {
   const [isWishlistActive, setIsWishlistActive] = useState(false);
@@ -112,7 +113,7 @@ const ProductDetailsArea = ({ product }: { product: IProduct }) => {
               <div className="stock-tag">In Stock</div>
               <h2 className="product-name">{title}</h2>
               <div className="price">
-                {old_price && <del>₹{old_price}</del>} ₹{price}
+                {old_price && <del>₹{old_price}</del>} {price===49999 ? (<Odometer value={`₹${price}`} />) : (<>₹{price}</>)}
               </div>
               <p className="availability">{quantity} Piece Available </p>
               <p className="description-text">{sm_desc}</p>

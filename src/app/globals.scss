@@ -351,10 +351,17 @@ top spacing
 }
 
 @include up($bp-lg) {
-  #loginModal .form-wrapper .social-use-btn {
-    width: calc(100% - 24px) !important;
-    margin-left: 12px !important;
-    margin-right: 12px !important;
-    margin-bottom: 48px !important;
+#loginModal .form-wrapper .social-use-btn {
+  width: calc(100% - 24px) !important;
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+  margin-bottom: 48px !important;
   }
 }
+
+/* Odometer digits */
+.odometer{ display:inline-flex; vertical-align:baseline; font-variant-numeric:tabular-nums; line-height:1em; }
+.odometer-col{ position:relative; display:inline-block; width:0.66em; height:1em; overflow:hidden; }
+.odometer-strip{ display:block; will-change:transform; transform:translateY(0); }
+.odometer-strip--animate{ transform:translateY(calc(var(--digit) * -1em)); transition-property: transform; }
+.odometer-digit{ display:block; height:1em; line-height:1em; }
