@@ -176,7 +176,7 @@ onMouseLeave={handleUnhover}
                   {menu.title}
                   <i className={`bi bi-chevron-down d-lg-none ms-1 dropdown-caret ${openDropdowns[menu.id] ? 'rotated' : ''}`}></i>
                 </a>
-                <ul className={`dropdown-menu ${openDropdowns[menu.id] ? 'show' : ''}`}>
+                <ul className={`dropdown-menu ${menu.title === 'Products' ? 'dropdown-menu-products' : ''} ${openDropdowns[menu.id] ? 'show' : ''}`}>
                   {menu.dropdown_submenus?.map((dm: any, i: number) => (
                     <li key={i} className={`${dm.sub_menus ? "dropdown" : ""}`}>
                       {dm.sub_menus ? (
