@@ -359,6 +359,13 @@ top spacing
   }
 }
 
+/* FAQ expand/collapse controls */
+.faq-controls{ display:flex; align-items:center; gap:12px; }
+.faq-control-link{ background:none; border:0; padding:0; color:#0c4a6e; text-transform:uppercase; font-weight:600; letter-spacing:.06em; cursor:pointer; }
+.faq-control-link:hover{ text-decoration:underline; }
+.faq-control-divider{ color:#0c4a6e; user-select:none; }
+@media (max-width: 767.98px){ .faq-controls{ gap:10px; } }
+
 /* Odometer digits */
 .odometer{ display:inline-flex; vertical-align:baseline; font-variant-numeric:tabular-nums; line-height:1em; }
 .odometer-col{ position:relative; display:inline-block; width:0.66em; height:1em; overflow:hidden; }
