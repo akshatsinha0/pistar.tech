@@ -66,9 +66,7 @@ const LocationTabsData = () => {
             >
               <div className="accordion accordion-style-one" id="accordionOne">
                 <div className="row justify-content-center">
-                  {/*----------------------------------------Adding address IND div staring--------------------------------*/}
-
-                  <div className="col-md-4 pt-30 wow fadeInUp">
+                  <div className="col-md-3 pt-30 wow fadeInUp">
                     <AddressBlock
                       icon={icon_1}
                       title="Visit Us"
@@ -76,7 +74,15 @@ const LocationTabsData = () => {
                       para="Hyderabad"
                     />
                   </div>
-                  <div className="col-md-4 pt-30 wow fadeInUp">
+                  <div className="col-md-3 pt-30 wow fadeInUp">
+                    <AddressBlock
+                      icon={icon_1}
+                      title="Branch Address"
+                      subtitle="VIT TBI, Technology Tower, Vellore Institute of Technology, Vellore, Tamil Nadu 632014"
+                      para="Vellore"
+                    />
+                  </div>
+                  <div className="col-md-3 pt-30 wow fadeInUp">
                     <AddressBlock
                       icon={icon_2}
                       title="Call Us"
@@ -84,17 +90,14 @@ const LocationTabsData = () => {
                       para="+91 9908127810"
                     />
                   </div>
-                  <div className="col-md-4 pt-30 wow fadeInUp">
+                  <div className="col-md-3 pt-30 wow fadeInUp">
                     <AddressBlock
                       icon={icon_3}
                       title="Contact Us "
-                      subtitle="
-                          If there is anything we can help you with just drop a mail at "
-                          para="info@pistar.tech"
+                      subtitle="If there is anything we can help you with just drop a mail at "
+                      para="info@pistar.tech"
                     />
                   </div>
-
-                  {/*-------------------------------------------Adding address IND div End-------------------------- */}
                 </div>
               </div>
             </div>

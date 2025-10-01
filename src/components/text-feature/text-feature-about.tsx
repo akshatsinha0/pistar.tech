@@ -11,7 +11,7 @@ import mission from "@/assets/images/icon/mission.svg";
 import vision from "@/assets/images/icon/vision.svg";
 import bg_image1 from "@/assets/images/background/contactbanner.jpg";
 import img1 from "@/assets/images/media/visionary-future-resize.png";
-import img2 from "@/assets/images/media/vision-reality.png";
+import img2 from "/MY_IMAGE/Picture1_chair.png";
 import img3 from "@/assets/images/media/relentless-mission-resize.png";
 
 const backImg1 = {
@@ -143,18 +143,11 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
                       From Vision to Reality: The Founding Story of PiStarTech
                     </h3>
                   </div>
-                  <p className="text-lg mt-45 lg-mt-30 mb-35 lg-mb-30 paracolor">
-                    PiStarTech was founded by Dr. Anis Fatema and Dr. Aftab M.
-                    Hussain, two visionary leaders in the field of electronics
-                    and communication engineering. Dr. Anis Fatema earned her
-                    Ph.D. in Electronics and Communication Engineering with a
-                    specialization in Flexible Electronics from the
-                    International Institute of Information Technology Hyderabad
-                    (IIITH), graduating in June 2024. Dr. Fatema under the
-                    guidance Ph.D. advisor Dr. Aftab M. Hussain spent four years
-                    on the research and development and developed the complete
-                    make in India solution <b>Podiascanner mat</b>.
-                  </p>
+                  <ul className="founding-story-list paracolor text-lg mt-45 lg-mt-30 mb-35 lg-mb-30">
+                    <li>PiStarTech was founded by Dr. Anis Fatema and Dr. Aftab M. Hussain, two visionary leaders in the field of electronics and communication engineering.</li>
+                    <li>Dr. Anis Fatema earned her Ph.D. in Electronics and Communication Engineering with a specialization in Flexible Electronics from the International Institute of Information Technology Hyderabad (IIITH), graduating in June 2024.</li>
+                    <li>Dr. Fatema under the guidance Ph.D. advisor Dr. Aftab M. Hussain spent four years on the research and development and developed the complete make in India solution <b>Podiascanner mat</b>.</li>
+                  </ul>
                   {/* <Link
                   href="/our-company"
                   className="btn-three icon-link mt-15 md-mb-40 fontcolor"
@@ -185,9 +178,7 @@ const TextFeatureAbout = ({ style_2 = false }: { style_2?: boolean }) => {
                     icon={mission}
                     link="/our-company"
                     title="Our Mission"
-                    desc="
-                   At PiStarTech, we are dedicated to leveraging advanced technology to address critical healthcare challenges and improve the quality of life for our users. Our flagship product, DiaPS Mat, exemplifies our mission to combine innovation with practical solutions for better health outcomes.
-                    "
+                    desc="Our mission is to revolutionize healthcare through innovative pressure sensing technology, providing precise diagnostic solutions that enhance patient care and improve quality of life."
                     bg_img={img3}
                   />
                 </div>

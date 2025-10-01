@@ -281,13 +281,7 @@ top spacing
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.collapse {
-  transition: height 0.3s ease-in-out !important;
-}
-
-.collapsing {
-  transition: height 0.3s ease-in-out !important;
-}
+e
 
 #loginModal .social-row {
   margin-bottom: 24px;
@@ -395,3 +389,22 @@ top spacing
 .odometer-strip{ display:block; will-change:transform; transform:translateY(0); }
 .odometer-strip--animate{ transform:translateY(calc(var(--digit) * -1em)); transition-property: transform; }
 .odometer-digit{ display:block; height:1em; line-height:1em; }
+.founding-story-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.founding-story-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.founding-story-list li:before {
+  content: "•";
+  color: #4739fd;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}

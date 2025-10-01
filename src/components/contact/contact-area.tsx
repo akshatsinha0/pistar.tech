@@ -99,7 +99,7 @@ const ContactArea = () => {
                       alt="icon"
                       className="lazy-img icon me-3"
                     />
-                    46/1, NH 44, Near Krishan Reddy Industrial Area, Kudlu Gate, Hosapalaya, Garvebhavi Palya Bengaluru, Karnataka, 560068
+                    IIIT-H Foundation, Desk B70, Vindhya C5, IIIT-Hyd Campus, Survey#25, Gachibowli, Hyderabad, Rangareddi, Telangana, India, 500032
                   </Link>
               </p>
                   </div>
@@ -118,25 +118,7 @@ const ContactArea = () => {
       </div>
       {/* <Image src={shape} alt="shape" layout="responsive" className="lazy-img shapes shape_01" /> */}
     </div>
-    <div className="block-feature-eleven contact-us-section">
-      <div className="map-banner">
-        <div className="gmap_canvas h-100 w-100">
-          {/* <iframe
-            className="gmap_iframe h-100 w-100"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80824.64108959114!2d77.57106061643262!3d12.940131448526687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16986c307911%3A0x9be62fff97b110aa!2sCGB%20Solutions%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1708347527779!5m2!1sen!2sin"
-          ></iframe> */}
-          <iframe
-            className="gmap_iframe h-100 w-100"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.4739631226944!2d77.6422128494832!3d12.892181344459578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14bad2ab0221%3A0x8bd04d73b003661f!2sAKR%20Tech%20Park!5e0!3m2!1sen!2sin!4v1710137545208!5m2!1sen!2sin"
-            loading="lazy"
-          ></iframe>
-          {/* <iframe
-            className="gmap_iframe h-100 w-100"
-            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=dhaka collage&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          ></iframe> */}
-        </div>
-      </div>
-    </div>
+
     </>
   );
 };

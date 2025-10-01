@@ -70,7 +70,7 @@ const AboutUsPage = () => {
           <TextFeatureAbout style_2={true} />
           {/* text feature one area end */}
 
-          <BlockFeatureAbout style_2={true}  />
+
 
           {/* block feature one area start */}
           {/* <BlockFeatureOne style_2={true} /> */}
