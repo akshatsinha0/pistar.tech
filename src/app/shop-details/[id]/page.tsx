@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   title: "Shop Details Page",
 };
 
-const ShopDetailsPage = ({ params }: { params: { id: string } }) => {
+const ShopDetailsPage = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   const product = product_data.find((p) => Number(p.id) === Number(params.id))!;
   return (
     <Wrapper>

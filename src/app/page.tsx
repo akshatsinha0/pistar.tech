@@ -1,4 +1,3 @@
-import HomeTwoBlogs from "@/components/blogs/home-2-blogs";
 import ClintLogo from "@/components/clint-logo/logo";
 import FancyBannerOne from "@/components/fancy-banner/fancy-banner-one";
 import FancyBannerTwo from "@/components/fancy-banner/fancy-banner-two";

@@ -18,9 +18,9 @@ type News = {
 };
 
 interface NewsPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const fetchNews = async (slug: string): Promise<News | null> => {
@@ -35,7 +35,8 @@ const fetchNews = async (slug: string): Promise<News | null> => {
   return { id: doc.id, ...doc.data() } as News;
 };
 
-const NewsPage = async ({ params }: NewsPageProps) => {
+const NewsPage = async (props: NewsPageProps) => {
+  const params = await props.params;
   const news = await fetchNews(params.slug);
 
   if (!news) {

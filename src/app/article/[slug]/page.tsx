@@ -19,9 +19,9 @@ type Article = {
 };
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const fetchArticle = async (slug: string): Promise<Article | null> => {
@@ -37,7 +37,8 @@ const fetchArticle = async (slug: string): Promise<Article | null> => {
 };
 
 // Generate metadata dynamically based on the article data
-export async function generateMetadata({ params }: ArticlePageProps) {
+export async function generateMetadata(props: ArticlePageProps) {
+  const params = await props.params;
   const article = await fetchArticle(params.slug);
 
   if (!article) {
@@ -64,7 +65,8 @@ export async function generateMetadata({ params }: ArticlePageProps) {
   };
 }
 
-const ArticlePage = async ({ params }: ArticlePageProps) => {
+const ArticlePage = async (props: ArticlePageProps) => {
+  const params = await props.params;
   const article = await fetchArticle(params.slug);
 
   if (!article) {

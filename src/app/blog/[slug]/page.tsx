@@ -18,9 +18,9 @@ type Blog = {
 };
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const fetchBlog = async (slug: string): Promise<Blog | null> => {
@@ -35,7 +35,8 @@ const fetchBlog = async (slug: string): Promise<Blog | null> => {
   return { id: doc.id, ...doc.data() } as Blog;
 };
 
-const BlogPage = async ({ params }: BlogPageProps) => {
+const BlogPage = async (props: BlogPageProps) => {
+  const params = await props.params;
   const blog = await fetchBlog(params.slug);
 
   if (!blog) {
