@@ -95,6 +95,7 @@ const team_data: ITeam[] = [
     designation: "Chief Executive Officer",
     page: "team-three",
     gif: gif1,
+    anchor: "#anis-fatema",
   },
   {
     id: 8,
@@ -103,6 +104,7 @@ const team_data: ITeam[] = [
     designation: "Technical Advisor ",
     page: "team-three",
     gif: gif1,
+    anchor: "#aftab-hussain",
   },
   // team three
   {

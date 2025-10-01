@@ -27,6 +27,7 @@ import FancyBannerFour from "@/components/fancy-banner/fancy-banner-four";
 import FancyBannerSix from "@/components/fancy-banner/fancy-banner-six";
 import BlockFeatureSeven from "@/components/block-feature/block-feature-seven";
 import BlockFeatureThree from "@/components/block-feature/block-feature-three";
+import mat1 from "@/assets/images/pistar/1.png";
 import FancyVideo from "@/components/fancy-banner/fancy-video";
 import PortfolioTwo from "@/components/portfolio/portfolio-two";
 import ContactArea from "@/components/contact/contact-area";
@@ -137,7 +138,34 @@ export default function HomePage() {
             </div>
           </div>
 
-
+          <div className="fancy-banner-two pt-80 lg-pt-80 pb-80 lg-pb-60 service-details" style={{ background: "rgb(41, 46, 49)" }}>
+            <div className="container">
+              <div className="wow fadeInUp">
+                <div className="row">
+                  <div className="col-lg-6 wow fadeInRight">
+                    <div className="title-three mb-35 md-mb-20 details-meta">
+                      <h2 style={{ color: "white" }}>Why is the Podiascanner Mat so easy to adopt?</h2>
+                    </div>
+                    <p className="text-lg mt-40 lg-mt-30 mb-30" style={{ color: "rgba(255, 255, 255, 0.6)" }}>
+                      The <b>Podiascanner Mat</b> from PiStarTech Private Limited is designed for easy adoption into any clinical setting. Its portable, flexible design allows it to seamlessly integrate into existing medical workflows without the need for extensive training or changes to the current setup. The device is user-friendly and highly adaptable, making it suitable for clinics and hospitals of any size. 
+                      <br /> <br />
+                      Since it provides instant, digital plantar pressure analysis in just 5 seconds, healthcare professionals can easily incorporate the Podiascanner Mat into their patient evaluation process, streamlining diagnosis and enhancing accuracy without interrupting day-to-day operations. Its affordability and ease of use make it accessible to a wide range of practitioners, ensuring they can upgrade to modern foot analysis technology with minimal effort.
+                    </p>
+                  </div>
+                  <div className="col-lg-6 col-md-8 m-auto wow fadeInLeft">
+                    <div className="media-wrapper md-mt-60">
+                      <Image
+                        src={mat1}
+                        alt="Podiascanner Mat"
+                        className="lazy-img"
+                        style={{ width: "100%", height: "auto" }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <ClintLogo />
 

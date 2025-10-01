@@ -10,7 +10,7 @@ const story_data:IStory[] = [
     body_title:`The Story Behind PiStarTech’s Identity`,
     body_desc:[
         `At PiStarTech, our name itself is a reflection of our core values. "Pi," often associated with the mathematical constant (π), symbolizes precision, intelligence, and a data-driven approach, all critical to the work we do in the field of diagnostics. "Star" represents excellence, leadership, and innovation, underscoring our commitment to pushing the boundaries of healthcare technology.`,
-        `Together, PiStar encapsulates our mission: to deliver high-precision, innovative solutions that address real-world healthcare challenges. This is embodied in our flagship product, DiaPS Mat, designed specifically for diabetic foot care and biomechanical analysis. It showcases how we integrate cutting-edge technology with advanced biomechanics to offer life-saving diagnostics.`,
+        `Together, PiStar encapsulates our mission: to deliver high-precision, innovative solutions that address real-world healthcare challenges. This is embodied in our flagship product, Podiascanner Mat, designed specifically for diabetic foot care and biomechanical analysis. It showcases how we integrate cutting-edge technology with advanced biomechanics to offer life-saving diagnostics.`,
       ],
     body_subtitle:'FINAL results',
     body_lists:[
@@ -37,7 +37,7 @@ const story_data:IStory[] = [
     body_title:'The Innovation That Steers Us',
     body_desc:[
         'To thrive, excel, and ensure better health outcomes, healthcare professionals and patients need access to cutting-edge diagnostic tools that provide precise and timely results.',
-        'At PiStarTech, we offer the DiaPS Mat, a state-of-the-art solution designed for diabetic foot care and biomechanical analysis. This innovative tool empowers users with the ability to detect and manage foot-related complications early, ensuring continuous and proactive care ',
+        'At PiStarTech, we offer the Podiascanner Mat, a state-of-the-art solution designed for diabetic foot care and biomechanical analysis. This innovative tool empowers users with the ability to detect and manage foot-related complications early, ensuring continuous and proactive care ',
         'for individuals at risk. By merging advanced technology with biomechanical insights, our solution helps healthcare providers and patients alike navigate critical health challenges with confidence and accuracy.'
       ],
     body_subtitle:'FINAL results',

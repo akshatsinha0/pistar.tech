@@ -66,7 +66,7 @@ const BlockFeatureSeven = () => {
               <CardItem
                 icon={icon_1}
                 title="Support for Healthcare Providers"
-                desc="The DiaPS Mat provides valuable assistance to healthcare professionals at various stages of clinical assessment and treatment. It identifies both normal and abnormal foot postures, delivering data that improves diagnostic accuracy. By capturing static podiatric pressure patterns (SPPP) when standing and dynamic podiatric pressure patterns (DPPP) while walking, it helps to substantiate clinical findings with statistical evidence and supports patient recovery monitoring after injuries or surgeries."
+                desc="The Podiascanner Mat provides valuable assistance to healthcare professionals at various stages of clinical assessment and treatment. It identifies both normal and abnormal foot postures, delivering data that improves diagnostic accuracy. By capturing static podiatric pressure patterns (SPPP) when standing and dynamic podiatric pressure patterns (DPPP) while walking, it helps to substantiate clinical findings with statistical evidence and supports patient recovery monitoring after injuries or surgeries."
                 bg_img={img2}
               />
             </div>
@@ -74,7 +74,7 @@ const BlockFeatureSeven = () => {
               <CardItem
                 icon={icon_2}
                 title="Meeting the Need for Precise Foot Pain Diagnosis"
-                desc="Foot and ankle pain is a widespread issue, with studies showing that one in three people experience such pain at some point. Traditional diagnostic methods depend significantly on the doctor's experience and often use outdated tools like ink-based harris mats, which lack reliability. Expensive digital foot scanning systems are available to only a small fraction of doctors. The DiaPS Mat offers an affordable, automated solution that provides thorough plantar pressure analysis in just five seconds, enabling precise diagnoses and tailored treatment plans."
+                desc="Foot and ankle pain is a widespread issue, with studies showing that one in three people experience such pain at some point. Traditional diagnostic methods depend significantly on the doctor's experience and often use outdated tools like ink-based harris mats, which lack reliability. Expensive digital foot scanning systems are available to only a small fraction of doctors. The Podiascanner Mat offers an affordable, automated solution that provides thorough plantar pressure analysis in just five seconds, enabling precise diagnoses and tailored treatment plans."
                 bg_img={img3}
               />
             </div>
@@ -105,7 +105,7 @@ const BlockFeatureSeven = () => {
                       Our solution provides extensive plantar pressure analysis,
                       or pedobarography, to aid in diagnosing and treating foot
                       conditions. By assessing pressure distribution during both
-                      static and dynamic activities, the DiaPS Mat helps to
+                      static and dynamic activities, the Podiascanner Mat helps to
                       identify foot types, high-pressure zones, and potential
                       problems such as calluses or ulcers. This evidence-based
                       approach not only informs doctors but also educates

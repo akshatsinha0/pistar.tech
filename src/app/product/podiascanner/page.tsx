@@ -63,7 +63,7 @@ function CardItem({
   );
 }
 
-const DiaspsMat = () => {
+const PodiacannerMat = () => {
   const product = product_data[0];
   return (
     <Wrapper>
@@ -256,4 +256,4 @@ const DiaspsMat = () => {
   );
 };
 
-export default DiaspsMat;
+export default PodiacannerMat;

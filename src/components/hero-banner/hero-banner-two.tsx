@@ -86,7 +86,7 @@ const HeroBannerTwo = () => {
                   className="text-xl pt-35 pb-35 wow fadeInUp text-white"
                   data-wow-delay="0.1s"
                 >
-                  Introducing the DiaPS Mat: Accurate, Affordable, and Portable
+                  Introducing the Podiascanner Mat: Accurate, Affordable, and Portable
                   Plantar Pressure Analysis.
                 </p>
                 <div className="d-inline-flex flex-wrap align-items-center">
