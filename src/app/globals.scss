@@ -8,15 +8,18 @@
 @import '../../public/assets/fonts/bootstrap-icons/font.css';
 @import '../../public/assets/scss/style.scss';
 @import './_breakpoints.scss';
+
 img,
 video {
   max-width: 100%;
   height: auto;
 }
+
 svg {
   max-width: 100%;
   height: auto;
 }
+
 // modal sizing & backdrop for the active modal
 .modal-backdrop.show {
   background: rgba(0, 0, 0, 0.5);
@@ -24,23 +27,28 @@ svg {
   backdrop-filter: blur(18px);
   opacity: .83;
 }
+
 .modal-dialog.modal-fullscreen {
   padding: 0 !important;
 }
+
 .user-data-form.modal-content {
   border-radius: 16px;
 }
+
 .modal .user-data-form.modal-content {
   max-width: 100% !important;
   width: 100% !important;
   margin: 0;
 }
+
 #loginModal .modal-dialog,
 #BookDemo .modal-dialog {
   --bs-modal-width: 75vw;
   max-width: 75vw !important;
   width: 75vw !important;
 }
+
 @media (max-width: 991.98px) {
 
   #loginModal .modal-dialog,
@@ -50,6 +58,7 @@ svg {
     width: 92vw !important;
   }
 }
+
 @media (max-width: 575.98px) {
 
   #loginModal .modal-dialog,
@@ -266,6 +275,7 @@ top spacing
   transform: translateX(0);
   opacity: 1;
 }
+
 .dropdown-caret {
   font-size: 0.7rem !important;
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -280,8 +290,6 @@ top spacing
 .dropdown-menu {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
-e
 
 #loginModal .social-row {
   margin-bottom: 24px;
@@ -345,37 +353,68 @@ e
 }
 
 @include up($bp-lg) {
-#loginModal .form-wrapper .social-use-btn {
-  width: calc(100% - 24px) !important;
-  margin-left: 12px !important;
-  margin-right: 12px !important;
-  margin-bottom: 48px !important;
+  #loginModal .form-wrapper .social-use-btn {
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    margin-bottom: 48px !important;
   }
 }
 
 /* FAQ expand/collapse controls */
-.faq-controls{ display:flex; align-items:center; gap:12px; }
-.faq-control-link{ background:none; border:0; padding:0; color:#0c4a6e; text-transform:uppercase; font-weight:600; letter-spacing:.06em; cursor:pointer; }
-.faq-control-link:hover{ text-decoration:underline; }
-.faq-control-divider{ color:#0c4a6e; user-select:none; }
-@media (max-width: 767.98px){ .faq-controls{ gap:10px; } }
+.faq-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-control-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #0c4a6e;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .06em;
+  cursor: pointer;
+}
+
+.faq-control-link:hover {
+  text-decoration: underline;
+}
+
+.faq-control-divider {
+  color: #0c4a6e;
+  user-select: none;
+}
+
+@media (max-width: 767.98px) {
+  .faq-controls {
+    gap: 10px;
+  }
+}
+
 // will be for my hovereffect for the Products section in the desktop
-@media (min-width: 992px){
-  .navbar .dropdown-menu-products{
+@media (min-width: 992px) {
+  .navbar .dropdown-menu-products {
     position: absolute;
     border: none;
-    border-top: 3px solid #62c087; /* brand accent */
-    background-color: #292e31; /* matches $color-two */
+    border-top: 3px solid #62c087;
+    /* brand accent */
+    background-color: #292e31;
+    /* matches $color-two */
     padding-top: 12px;
-    border-radius:0 !important;
+    border-radius: 0 !important;
     overflow: visible;
   }
-  .navbar .dropdown-menu-products::after{
+
+  .navbar .dropdown-menu-products::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: -8px;
     left: 64px;
-    width: 0; height: 0;
+    width: 0;
+    height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid #62c087;
@@ -384,11 +423,38 @@ e
 }
 
 /* Odometer digits */
-.odometer{ display:inline-flex; vertical-align:baseline; font-variant-numeric:tabular-nums; line-height:1em; }
-.odometer-col{ position:relative; display:inline-block; width:0.66em; height:1em; overflow:hidden; }
-.odometer-strip{ display:block; will-change:transform; transform:translateY(0); }
-.odometer-strip--animate{ transform:translateY(calc(var(--digit) * -1em)); transition-property: transform; }
-.odometer-digit{ display:block; height:1em; line-height:1em; }
+.odometer {
+  display: inline-flex;
+  vertical-align: baseline;
+  font-variant-numeric: tabular-nums;
+  line-height: 1em;
+}
+
+.odometer-col {
+  position: relative;
+  display: inline-block;
+  width: 0.66em;
+  height: 1em;
+  overflow: hidden;
+}
+
+.odometer-strip {
+  display: block;
+  will-change: transform;
+  transform: translateY(0);
+}
+
+.odometer-strip--animate {
+  transform: translateY(calc(var(--digit) * -1em));
+  transition-property: transform;
+}
+
+.odometer-digit {
+  display: block;
+  height: 1em;
+  line-height: 1em;
+}
+
 .founding-story-list {
   list-style: none;
   padding-left: 0;
@@ -407,4 +473,59 @@ e
   position: absolute;
   left: 0;
   top: -5px;
+}
+
+.spec ifications-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.spec-col-left {
+  flex: 1;
+  text-align: left;
+}
+
+.spec-col-right {
+  flex: 1;
+  text-align: right;
+}
+
+.partner-slider-one {
+  overflow: hidden;
+}
+
+.partner-slider-one .slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.partner-slider-one .slick-slide {
+  padding: 0 30px;
+}
+
+.partner-slider-one .slick-slide img {
+  max-height: 100px !important;
+  height: 100px !important;
+  width: auto !important;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.7);
+  transition: filter 0.3s ease;
+}
+
+.partner-slider-one .slick-slide img:hover {
+  filter: grayscale(0) opacity(1);
 }

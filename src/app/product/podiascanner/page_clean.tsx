@@ -9,7 +9,6 @@ import about_bg from "@/assets/images/banners/diaspmat.jpg";
 import mat0 from "@/assets/images/pistar/2.png";
 import mat1 from "@/assets/images/pistar/mat.jpg";
 import mat2 from "@/assets/images/pistar/mat1.jpg";
-import mat3 from "@/assets/images/pistar/mat2.jpg";
 import data from "@/assets/images/pistar/data.jpg";
 import Link from "next/link";
 import ProductDetailsArea from "@/components/shop/product-details/product-details-area";

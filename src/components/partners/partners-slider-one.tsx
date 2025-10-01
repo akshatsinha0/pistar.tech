@@ -12,8 +12,6 @@ import img7 from "@/assets/images/logo/clints/ricard.png"
 import img8 from "@/assets/images/logo/clints/nidhiprayas.png"
 import img9 from "@/assets/images/logo/clints/Nidhiseed.png"
 import img10 from "@/assets/images/logo/clints/Dos.png"
-
-// slider setting
 const slider_setting = {
   dots: false,
   arrows: false,
@@ -21,7 +19,12 @@ const slider_setting = {
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 1,
+  speed: 2000,
+  cssEase: "linear",
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  infinite: true,
   responsive: [
     {
       breakpoint: 992,

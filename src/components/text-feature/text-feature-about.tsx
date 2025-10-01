@@ -11,7 +11,7 @@ import mission from "@/assets/images/icon/mission.svg";
 import vision from "@/assets/images/icon/vision.svg";
 import bg_image1 from "@/assets/images/background/contactbanner.jpg";
 import img1 from "@/assets/images/media/visionary-future-resize.png";
-import img2 from "/MY_IMAGE/Picture1_chair.png";
+import img2 from "@/assets/images/media/Picture1_chair.png";
 import img3 from "@/assets/images/media/relentless-mission-resize.png";
 
 const backImg1 = {

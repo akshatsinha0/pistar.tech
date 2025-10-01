@@ -10,12 +10,11 @@ import icon_1 from "@/assets/images/icon/icon_49.svg";
 import icon_2 from "@/assets/images/icon/icon_50.svg";
 import map from "@/assets/images/icon/footer-map.svg";
 import Newsletter from "@/components/forms/newsletter";
-import NewsletterBannerTwo from "@/components/newsletter/newsletter-banner-2";
+
 
 const FooterOne = () => {
   return (
   <>
-  <NewsletterBannerTwo />
     <div className="footer-one" style={{background: "linear-gradient(#313638,#313638)"}}>
       <div className="container">
         <div className="inner-wrapper">
