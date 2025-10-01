@@ -12,8 +12,6 @@
     "@hookform/resolvers": "^3.3.1",
     "@next/third-parties": "15.5.4",
     "@popperjs/core": "^2.11.8",
-    "@react-three/drei": "^9.111.2",
-    "@react-three/fiber": "^8.17.5",
     "@reduxjs/toolkit": "^1.9.7",
     "@syncfusion/ej2-base": "^24.2.7",
     "@syncfusion/ej2-maps": "^24.2.4",
