@@ -30,11 +30,46 @@ function FeatureItem({
         <h3 className="fw-bold mb-30 text-dark">{title}</h3>
         <ul className="style-none">
           {items.map((item, index) => (
-            <li key={index} className="d-flex align-items-start mb-15">
-              <div className="icon-check me-3 mt-1">
-                <i className="bi bi-check-circle-fill" style={{ color: "#28a745", fontSize: "1.2rem" }}></i>
-              </div>
-              <span className="text-dark">{item}</span>
+            <li 
+              key={index} 
+              style={{
+                width: '100%',
+                display: 'inline-block',
+                fontWeight: '500',
+                color: '#000',
+                padding: '6px 50px 6px 50px',
+                borderRadius: '45px',
+                position: 'relative',
+                marginBottom: '7px'
+              }}
+            >
+              <span 
+                style={{
+                  position: 'absolute',
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: '50%',
+                  background: '#62c087',
+                  left: '10px',
+                  top: '7px',
+                  transition: 'all 0.2s'
+                }}
+              ></span>
+              <span 
+                style={{
+                  position: 'absolute',
+                  fontFamily: 'bootstrap-icons',
+                  top: '11px',
+                  left: '18px',
+                  color: '#292e31',
+                  transition: 'all 0.2s',
+                  fontSize: '14px',
+                  fontWeight: 'bold'
+                }}
+              >
+                ✓
+              </span>
+              {item}
             </li>
           ))}
         </ul>
