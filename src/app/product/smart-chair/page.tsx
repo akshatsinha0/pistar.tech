@@ -106,7 +106,7 @@ const SmartChairPage = () => {
                       <h2 className="text-white">Introducing the Posture-perfect Smart Chair — Elevating Health and Comfort</h2>
                     </div>
                     <p className="text-lg mt-40 lg-mt-30 mb-30 text-white">
-                      Sitting may be a part of our everyday lives, but bad posture doesn't have to be. At PiStarTech, we present the revolutionary Posture-perfect Smart Chair, an intelligent solution to ensure your sitting habits are as healthy as they are comfortable.
+                      Sitting may be a part of our everyday lives, but bad posture doesn&apos;t have to be. At PiStarTech, we present the revolutionary Posture-perfect Smart Chair, an intelligent solution to ensure your sitting habits are as healthy as they are comfortable.
                     </p>
                   </div>
                   <div className="col-lg-6">

@@ -126,7 +126,7 @@ export default function HomePage() {
                       According to the estimates, 60% of the Indian population
                       experiences back pain at some time in their lives. It is
                       the third most common reason for a doctor&apos;s visit,
-                      and as we all know that "Prevention is better than cure",
+                      and as we all know that &quot;Prevention is better than cure&quot;,
                       We present to you, a patented smart seating solution
                       called- smart chair which is the best preventive measure
                       for all types of pains that may occur to incorrect seating
