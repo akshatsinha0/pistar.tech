@@ -9,7 +9,7 @@ import aftab from "@/assets/images/team/aftab.jpg";
 const TeamDetailsArea = () => {
   return (
     <>
-      <div className="team-details light-bg border-top pt-120 pb-60 lg-pt-80 ">
+      <div id="anis-fatema" className="team-details light-bg border-top pt-120 pb-60 lg-pt-80 ">
         <div className="container">
           <div className="bg-wrapper">
             <div className="row">
@@ -88,7 +88,7 @@ const TeamDetailsArea = () => {
           </div>
         </div>
       </div>
-      <div className="team-details light-bg border-top pt-60 pb-120 lg-pt-80 ">
+      <div id="aftab-hussain" className="team-details light-bg border-top pt-60 pb-120 lg-pt-80 ">
         <div className="container">
           <div className="bg-wrapper">
             <div className="row">

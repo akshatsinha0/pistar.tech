@@ -14,7 +14,7 @@ const TeamSingle = ({ team, spacing }: { team: ITeam; spacing?: string }) => {
           style={{ height: "auto" }}
         />
         <Link
-          href="/team-details"
+          href={team.anchor ? `/team-details${team.anchor}` : "/team-details"}
           className="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"
         >
           {/* <i className="bi bi-arrow-up-right"></i> */}

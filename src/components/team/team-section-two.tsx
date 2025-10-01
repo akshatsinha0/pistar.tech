@@ -31,7 +31,7 @@ const TeamSectionTwo = () => {
                       className="lazy-img w-100"
                       style={{height:'auto'}}
                     />
-                    <Link href="/team-details"
+                    <Link href={t.anchor ? `/team-details${t.anchor}` : "/team-details"}
                       className="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"
                     >
                       <i className="bi bi-arrow-up-right"></i>

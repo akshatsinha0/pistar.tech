@@ -31,7 +31,7 @@ function CardItem({
   return (
     <div className="card-style-sixteen text-center mt-40">
       <div className=" m-auto  d-flex align-items-center justify-content-center">
-        <Link href={link} className="w-50" target="_blank"  rel="noopener noreferrer" locale={false}> 
+        <Link href={link} className="w-50" target="_blank"  rel="noopener noreferrer"> 
           <Image src={icon} alt="icon" layout="responsive" className="lazy-img" />
         </Link>
       </div>

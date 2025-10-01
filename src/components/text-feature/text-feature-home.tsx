@@ -72,7 +72,7 @@ const TextFeatureHome = ({ style_2 = false }: { style_2?: boolean }) => {
                 </div>
                 <p className="text-lg">
                   PiStarTech Private Limited develops innovative solutions like
-                  the Diabetic PodiaScan Mat (DiaPS Mat), providing precise
+                  the Diabetic PodiaScan Mat (Podiascanner Mat), providing precise
                   plantar pressure analysis for improved foot health
                   diagnostics. Our technology offers a reliable, cost-effective
                   tool to support medical professionals and enhance patient care
