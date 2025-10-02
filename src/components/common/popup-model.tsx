@@ -101,6 +101,10 @@ const PopUpModal = () => {
                   className="btn-close"
                   aria-label="Close"
                   onClick={handleClose}
+                  style={{
+                    filter: 'invert(1)',
+                    backgroundColor: 'transparent'
+                  }}
                 ></button>
                 {/* <button
                   className="mt-3"
