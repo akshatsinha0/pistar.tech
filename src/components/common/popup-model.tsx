@@ -98,14 +98,49 @@ const PopUpModal = () => {
                 </div>
                 <button
                   type="button"
-                  className="btn-close"
                   aria-label="Close"
                   onClick={handleClose}
+                  className="custom-close-btn"
                   style={{
-                    filter: 'invert(1)',
-                    backgroundColor: 'transparent'
+                    position: 'absolute',
+                    right: '15px',
+                    top: '15px',
+                    width: '32px',
+                    height: '32px',
+                    border: 'none',
+                    background: 'transparent',
+                    cursor: 'pointer',
+                    padding: '0',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '28px',
+                    fontWeight: 'bold',
+                    color: '#000000',
+                    lineHeight: '1',
+                    opacity: '1',
+                    zIndex: '9999',
+                    WebkitTextFillColor: '#000000',
+                    textShadow: 'none'
                   }}
-                ></button>
+                >
+                  <span style={{ color: '#000000', WebkitTextFillColor: '#000000' }}>×</span>
+                </button>
+                <style dangerouslySetInnerHTML={{
+                  __html: `
+                    .custom-close-btn {
+                      color: #000000 !important;
+                      -webkit-text-fill-color: #000000 !important;
+                    }
+                    .custom-close-btn span {
+                      color: #000000 !important;
+                      -webkit-text-fill-color: #000000 !important;
+                    }
+                    .custom-close-btn:hover {
+                      color: #333333 !important;
+                    }
+                  `
+                }} />
                 {/* <button
                   className="mt-3"
                   onClick={handleDontShowAgain}
