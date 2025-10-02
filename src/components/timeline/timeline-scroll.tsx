@@ -1,5 +1,5 @@
 "use client";
-import React,{useEffect,useLayoutEffect,useRef,useState,useId} from "react";
+import React,{useEffect,useLayoutEffect,useRef,useState,useId,useMemo,useCallback} from "react";
 import styles from "./timeline-scroll.module.css";
 
 type Side="left"|"right";
@@ -51,27 +51,22 @@ function Item({index,text,side,kind,current,onRefs,onActive}:{index:number;text:
 }
 
 export default function TimelineScroll(){
-  const list:(Entry & {side:Side})[]=[];
-  let currentSide:Side="left";
-  let lastMilestone:Side="left";
-  for(const e of entries){
-    if(e.kind==="milestone"){list.push({...e,side:currentSide}); lastMilestone=currentSide; currentSide=currentSide==="left"?"right":"left";} else {list.push({...e,side:lastMilestone});}
-  }
+  const list=useMemo<(Entry & {side:Side})[]>(()=>{const arr:(Entry & {side:Side})[]=[]; let currentSide:Side="left"; let lastMilestone:Side="left"; for(const e of entries){ if(e.kind==="milestone"){arr.push({...e,side:currentSide}); lastMilestone=currentSide; currentSide=currentSide==="left"?"right":"left";} else {arr.push({...e,side:lastMilestone});} } return arr;},[]);
 const timelineRef=useRef<HTMLDivElement|null>(null);
   const sparkleRef=useRef<HTMLDivElement|null>(null);
 const refs=useRef(new Array(list.length).fill(null) as {container:HTMLDivElement|null;text:HTMLHeadingElement|null;bullet:HTMLSpanElement|null;underline:HTMLSpanElement|null}[]);
   const [paths,setPaths]=useState<{forIndex:number;d:string}[]>([]);
   const [activeNotes,setActiveNotes]=useState<Set<number>>(new Set());
-  function handleRefs(i:number,r:{container:HTMLDivElement|null;text:HTMLHeadingElement|null;bullet:HTMLSpanElement|null}){refs.current[i]=r;}
-  function handleActive(i:number,a:boolean){setActiveNotes(prev=>{const n=new Set(prev); if(a){n.add(i);} else {n.delete(i);} return n;});}
-  function rebuild(){if(!timelineRef.current)return; const tRect=timelineRef.current.getBoundingClientRect(); const centerX=tRect.width/2; const out:{forIndex:number;d:string}[]=[]; for(let i=0;i<list.length;i++){if(list[i].kind!=="note")continue; const note=refs.current[i]; if(!note||!note.text)continue; const nRect=note.text.getBoundingClientRect(); const endX=list[i].side==='left'? (nRect.left - tRect.left - 10):(nRect.right - tRect.left + 10); const endY=nRect.top - tRect.top + nRect.height/2; function addFrom(anchorIndex:number){const m=refs.current[anchorIndex]; if(!m)return; const bRect=(m.bullet?m.bullet.getBoundingClientRect():m.container?.getBoundingClientRect()); if(!bRect)return; const startX=centerX; const startY=bRect.top - tRect.top + bRect.height/2; const dx=Math.abs(endX-startX); const c=Math.min(Math.max(dx*0.5,80),220); const cp1x=startX + (list[i].side==='left'? -c: c); const cp1y=startY - c*0.25; const cp2x=endX + (list[i].side==='left'? c*0.2: -c*0.2); const cp2y=endY + c*0.25; const d=`M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${endX} ${endY}`; out.push({forIndex:i,d}); }
+  function handleRefs(i:number,r:{container:HTMLDivElement|null;text:HTMLHeadingElement|null;bullet:HTMLSpanElement|null;underline:HTMLSpanElement|null}){refs.current[i]=r;}
+  function handleActive(i:number,a:boolean){setActiveNotes(prev=>{const n=new Set(prev); if(a){n.add(i);} else {n.delete(i);} return n;}); requestAnimationFrame(()=>rebuild());}
+  const rebuild=useCallback(()=>{if(!timelineRef.current)return; const tRect=timelineRef.current.getBoundingClientRect(); const centerX=tRect.width/2; const out:{forIndex:number;d:string}[]=[]; for(let i=0;i<list.length;i++){if(list[i].kind!=="note")continue; const note=refs.current[i]; if(!note||!note.text)continue; const nRect=note.text.getBoundingClientRect(); const endX=list[i].side==='left'? (nRect.left - tRect.left - 10):(nRect.right - tRect.left + 10); const endY=nRect.top - tRect.top + nRect.height/2; const addFrom=(anchorIndex:number)=>{const m=refs.current[anchorIndex]; if(!m)return; const bRect=(m.bullet?m.bullet.getBoundingClientRect():m.container?.getBoundingClientRect()); if(!bRect)return; const startX=centerX; const startY=bRect.top - tRect.top + bRect.height/2; const dx=Math.abs(endX-startX); const c=Math.min(Math.max(dx*0.5,80),220); const cp1x=startX + (list[i].side==='left'? -c: c); const cp1y=startY - c*0.25; const cp2x=endX + (list[i].side==='left'? c*0.2: -c*0.2); const cp2y=endY + c*0.25; const d=`M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${endX} ${endY}`; out.push({forIndex:i,d}); };
     let prev=i-1; while(prev>=0 && list[prev].kind!=="milestone") prev--; if(prev>=0) addFrom(prev);
     let next=i+1; while(next<list.length && list[next].kind!=="milestone") next++; if(next<list.length) addFrom(next);
   }
   setPaths(out);
-  }
-  useLayoutEffect(()=>{rebuild();},[]);
-  useEffect(()=>{const r=()=>rebuild(); window.addEventListener("resize",r); return()=>window.removeEventListener("resize",r);});
+  },[list]);
+  useLayoutEffect(()=>{rebuild();},[rebuild]);
+  useEffect(()=>{const r=()=>rebuild(); window.addEventListener("resize",r); return()=>window.removeEventListener("resize",r);},[rebuild]);
   useEffect(()=>{let raf=0; let lastY=window.scrollY; let lastT=performance.now(); let speed=0; let y=0; let activeUntil=0; function onScroll(){const now=performance.now(); const dy=Math.abs(window.scrollY-lastY); const dt=Math.max(1,now-lastT); lastT=now; lastY=window.scrollY; speed=Math.min(10,0.25+dy/dt*6); activeUntil=now+220; if(!raf) step();} function step(){const now=performance.now(); if(!sparkleRef.current||!timelineRef.current){raf=0;return;} const h=timelineRef.current.offsetHeight; y=(y+speed)%Math.max(1,h); sparkleRef.current.style.transform=`translateX(-50%) translateY(${y}px)`; if(now<activeUntil){raf=requestAnimationFrame(step);} else {raf=0;}} window.addEventListener("scroll",onScroll,{passive:true}); return()=>{if(raf)cancelAnimationFrame(raf); window.removeEventListener("scroll",onScroll);};},[]);
   return(
     <section className={styles.timelineSection}>
