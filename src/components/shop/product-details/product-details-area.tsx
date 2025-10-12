@@ -53,6 +53,7 @@ const ProductDetailsArea = ({ product }: { product: IProduct }) => {
     title,
     old_price,
   } = product || {};
+  const isPreorderProduct = title === "Podiascanner Mat" || title === "Smart Chair";
   const { orderQuantity } = useAppSelector((state) => state.cart);
   const [activeImg, setActiveImg] = useState(related_images[0]);
   const dispatch = useAppDispatch();
@@ -183,8 +184,11 @@ const ProductDetailsArea = ({ product }: { product: IProduct }) => {
                       className="flex-fill text-center btn-ten tran3s w-100"
                       style={{ padding: "0px 15px" }}
                     >
-                      {" "}
-                      Login to Buy <i className="bi bi-person-circle"></i>
+                      {isPreorderProduct ? (
+                        <>Preorder <i className="bi bi-bag-plus"></i></>
+                      ) : (
+                        <>Login to Buy <i className="bi bi-person-circle"></i></>
+                      )}
                     </span>
                   </a>
                 )}
