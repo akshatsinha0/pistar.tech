@@ -8,17 +8,17 @@ type Entry={kind:"milestone"|"note";text:string;current?:boolean};
 
 const entries:Entry[]=[
   {kind:"milestone",text:"Idea"},
-  {kind:"note",text:"Pre-Seed Stage (Supported by Meity Tide 2.0 – 7 lakhs, 2021)"},
+  {kind:"note",text:"Pre-Seed Stage (Supported by Meity Tide 2.0, 2021)"},
   {kind:"milestone",text:"Research"},
   {kind:"milestone",text:"POC Development"},
   {kind:"milestone",text:"Idea Validation"},
-  {kind:"note",text:"Seed Stage (Supported by Nidhi Prayas – 10 lakhs, 2022)"},
+  {kind:"note",text:"Seed Stage (Supported by Nidhi Prayas, 2022)"},
   {kind:"milestone",text:"Prototype Development"},
   {kind:"milestone",text:"Market Validation"},
-  {kind:"note",text:"Early Stage (Supported by PRIF – 25 lakhs, 2022)"},
+  {kind:"note",text:"Early Stage (Supported by PRIF, 2022)"},
   {kind:"milestone",text:"Minimum Viable Product",current:true},
   {kind:"milestone",text:"Launch and Scale to Bigger Market"},
-  {kind:"note",text:"Growth Stage (Supported by Nidhi SSS – 40 lakhs, 2024)"}
+  {kind:"note",text:"Growth Stage (Supported by Nidhi SSS, 2024)"}
 ];
 
 function useTypewriter(t:string,active:boolean,speed=30){
