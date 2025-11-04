@@ -123,7 +123,10 @@ const TeamDetailsArea = () => {
                       ></Image>
                     </Link>
                   </h2>
-                  <div className="post pb-5">Technical Advisor</div>
+                  <div className="post pb-3">Co-Founder and Technical Advisor</div>
+                  <div className="post pb-5" style={{ fontSize: '0.9em', fontStyle: 'italic', color: '#666' }}>
+                    Author of the world&apos;s first book on Flexible Electronics - &quot;Introduction to Flexible Electronics&quot;
+                  </div>
                   {/* <h6 className="fw-bold">About Me</h6> */}
                   <p className="m-0">
                     A visionary in the field of flexible electronics, Dr. Aftab

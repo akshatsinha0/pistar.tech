@@ -101,7 +101,7 @@ const team_data: ITeam[] = [
     id: 8,
     img: aftab,
     name: "Dr. Aftab Hussain",
-    designation: "Technical Advisor ",
+    designation: "Co-Founder and Technical Advisor",
     page: "team-three",
     gif: gif1,
     anchor: "#aftab-hussain",

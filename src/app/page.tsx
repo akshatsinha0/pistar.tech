@@ -174,8 +174,6 @@ export default function HomePage() {
           <PortfolioTwo />
 
           <AwardsSection />
-          
-          <ImgPopUp />
         </main>
 
         <FooterOne />

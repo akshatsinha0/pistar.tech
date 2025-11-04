@@ -35,6 +35,11 @@ const TeamSingleTwo = ({team,spacing}: {team:ITeam;spacing?: string;}) => {
       </div>
       <h4 className="fw-500 pt-20 m0">{team.name}</h4>
       <div className="fs-6">{team.designation}</div>
+      {team.name === "Dr. Aftab Hussain" && (
+        <div className="fs-6 fst-italic" style={{ color: '#888', fontSize: '0.85em' }}>
+          Author of the world&apos;s first book on Flexible Electronics - &quot;Introduction to Flexible Electronics&quot;
+        </div>
+      )}
     </div>
   );
 };
