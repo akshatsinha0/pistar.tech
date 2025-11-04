@@ -9,7 +9,7 @@ import img1 from "@/assets/images/logo/clints/1.png"
 import img2 from "@/assets/images/logo/clints/2.png"
 import img3 from "@/assets/images/logo/clints/3.png"
 import img5 from "@/assets/images/logo/clints/hubdata.png"
-import img4 from "@/assets/images/logo/clints/4.png"
+import img4 from "@/assets/images/logo/clints/5.png"
 
 
 
