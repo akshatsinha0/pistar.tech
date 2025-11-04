@@ -128,9 +128,11 @@ const TeamDetailsArea = () => {
                   <p className="m-0">
                     A visionary in the field of flexible electronics, Dr. Aftab
                     M. Hussain is the Co-Founder and Chief Technology Officer of
-                    PiStarTech. His journey into the world of electronics is
-                    deeply rooted in his academic pursuits, combined with an
-                    innate passion for solving real-world problems.
+                    PiStarTech. Author of the world&apos;s first book on Flexible 
+                    Electronics - &quot;Introduction to Flexible Electronics&quot;, his 
+                    journey into the world of electronics is deeply rooted in his 
+                    academic pursuits, combined with an innate passion for solving 
+                    real-world problems.
                   </p>
                 </div>
               </div>
