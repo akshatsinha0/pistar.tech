@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    triggers {
+        pollSCM('H/5 * * * *') // Poll every 5 minutes
+    }
+    
     environment {
         NODE_ENV = 'production'
         PATH = "C:\\nvm4w\\nodejs;${env.PATH}"
