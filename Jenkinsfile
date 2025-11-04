@@ -14,7 +14,16 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out code...'
+                deleteDir() // Clean workspace before checkout
                 checkout scm
+            }
+        }
+        
+        stage('Verify Files') {
+            steps {
+                echo 'Verifying image files exist...'
+                bat 'dir public\\assets\\images\\logo\\clints'
+                bat 'dir public\\assets\\images\\icon'
             }
         }
         
