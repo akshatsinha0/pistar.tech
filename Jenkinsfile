@@ -7,6 +7,7 @@ pipeline {
     
     environment {
         NODE_ENV = 'production'
+        PORT = '3000'
         PATH = "C:\\nvm4w\\nodejs;${env.PATH}"
     }
     
@@ -37,15 +38,20 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Next.js application...'
-                bat 'npm run build'
+                script {
+                    def buildResult = bat(script: 'npm run build', returnStatus: true)
+                    if (buildResult != 0) {
+                        error('Next.js build failed. Aborting deployment.')
+                    }
+                }
             }
         }
         
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                // Option 1: Using PM2 (recommended for Next.js)
-                bat 'pm2 restart pistar || pm2 start npm --name pistar -- start -- -p 3000'
+                // Using PM2 with proper port configuration via environment variable
+                bat 'pm2 restart pistar || pm2 start npm --name pistar -- run start'
                 
                 // Option 2: If you prefer copying files to a web server directory, uncomment below:
                 // bat 'xcopy /E /I /Y .next\\* C:\\inetpub\\wwwroot\\pistar\\.next\\'

@@ -127,7 +127,7 @@ const ClintLogo = () => {
                 {slider_logos.map((logo, i) => (
                     <div key={i} className="item">
                     <div className="p-3">
-                        <Image src={logo} alt="Cgb Clint Logo" layout='' width={154} height={94} style={{ height: "auto" }} />
+                        <Image src={logo} alt="Cgb Clint Logo" width={154} height={94} style={{ height: "auto" }} />
                     </div>
                     </div>
                 ))}
