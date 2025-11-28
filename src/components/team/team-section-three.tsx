@@ -31,7 +31,7 @@ const TeamSectionThree = ({ style_2 = false }: { style_2?: boolean }) => {
                 {teams.map((item, i) => (
                   <div
                     key={i}
-                    className="col-lg-3 col-sm-6 wow fadeInUp"
+                    className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp"
                     data-wow-delay={`0.${i}s`}
                   >
                     <TeamSingleTwo team={item} spacing="mt-35" />
