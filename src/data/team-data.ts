@@ -15,6 +15,7 @@ import Kushangi  from "@/assets/images/media/1.jpg"
 import Shobha  from "@/assets/images/media/3.jpg"
 import anisfatema from "@/assets/images/team/anisfatema.jpg";
 import aftab from "@/assets/images/team/aftab.jpg";
+import yelchur from "@/assets/images/team/yelchur-dwarakanath.jpg";
 import Rawan from "@/assets/images/media/8.png"
 import gif1 from "@/assets/images/media/gif.gif"
 import gif2 from "@/assets/images/media/gif2.gif"
@@ -92,7 +93,7 @@ const team_data: ITeam[] = [
     id: 7,
     img: anisfatema,
     name: "Dr. Anis Fatema",
-    designation: "Chief Executive Officer",
+    designation: "Founder and Chief Executive Officer",
     page: "team-three",
     gif: gif1,
     anchor: "#anis-fatema",
@@ -106,9 +107,17 @@ const team_data: ITeam[] = [
     gif: gif1,
     anchor: "#aftab-hussain",
   },
-  // team three
   {
     id: 9,
+    img: yelchur,
+    name: "Yelchur Dwarakanath",
+    designation: "Business Strategist",
+    page: "team-three",
+    gif: gif2,
+  },
+  // team three
+  {
+    id: 10,
     img: Rahul,
     name: "Rahul Sharma",
     designation: "Finance",
