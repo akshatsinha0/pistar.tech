@@ -1,9 +1,33 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Video3DWrapper = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (wrapperRef.current) {
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div 
+      ref={wrapperRef}
       className="video-wrapper" 
       style={{ 
         borderRadius: "24px", 
@@ -13,16 +37,24 @@ const Video3DWrapper = () => {
         background: "linear-gradient(145deg, #1a1a1a, #000)",
         position: "relative",
         transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-        transform: "perspective(1000px) rotateX(2deg) translateY(0)",
-        transformStyle: "preserve-3d"
+        transform: isVisible 
+          ? "perspective(1000px) rotateX(2deg) translateY(0)" 
+          : "perspective(1000px) rotateX(15deg) translateY(-100vh) scale(0.8)",
+        transformStyle: "preserve-3d",
+        opacity: isVisible ? 1 : 0,
+        animation: isVisible ? "fallDown 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards" : "none"
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "perspective(1000px) rotateX(0deg) translateY(-10px) scale(1.02)";
-        e.currentTarget.style.boxShadow = "0 40px 120px rgba(0,0,0,0.4), 0 20px 60px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.15)";
+        if (isVisible) {
+          e.currentTarget.style.transform = "perspective(1000px) rotateX(0deg) translateY(-10px) scale(1.02)";
+          e.currentTarget.style.boxShadow = "0 40px 120px rgba(0,0,0,0.4), 0 20px 60px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.15)";
+        }
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "perspective(1000px) rotateX(2deg) translateY(0) scale(1)";
-        e.currentTarget.style.boxShadow = "0 30px 90px rgba(0,0,0,0.3), 0 15px 40px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,0.1)";
+        if (isVisible) {
+          e.currentTarget.style.transform = "perspective(1000px) rotateX(2deg) translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 30px 90px rgba(0,0,0,0.3), 0 15px 40px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,0.1)";
+        }
       }}
     >
       <div 
