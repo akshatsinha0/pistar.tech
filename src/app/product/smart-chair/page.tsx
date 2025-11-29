@@ -3,13 +3,11 @@ import { Metadata } from "next";
 import Wrapper from "@/layout/wrapper";
 import HeaderTwo from "@/layout/header/Header";
 import BreadcrumbOne from "@/components/breadcrumb/breadcrumb-one";
-import Image, { StaticImageData } from "next/image";
 import FooterOne from "@/layout/footer/footer-one";
 import about_bg from "@/assets/images/banners/diaspmat.jpg";
-import Link from "next/link";
 import ProductDetailsArea from "@/components/shop/product-details/product-details-area";
 import product_data from "@/data/product-data";
-import chair from "@/assets/images/pistar/chair.png";
+import Video3DWrapper from "@/components/video/video-3d-wrapper";
 
 export const metadata: Metadata = {
   title: "Smart Chair - Pistar Tech",
@@ -120,63 +118,7 @@ const SmartChairPage = () => {
             <div className="container" style={{ position: "relative", zIndex: 1 }}>
               <div className="row justify-content-center">
                 <div className="col-lg-10">
-                  <div 
-                    className="video-wrapper" 
-                    style={{ 
-                      borderRadius: "24px", 
-                      overflow: "hidden", 
-                      boxShadow: "0 30px 90px rgba(0,0,0,0.3), 0 15px 40px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,0.1)",
-                      border: "4px solid rgba(255,255,255,0.2)",
-                      background: "linear-gradient(145deg, #1a1a1a, #000)",
-                      position: "relative",
-                      transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                      transform: "perspective(1000px) rotateX(2deg) translateY(0)",
-                      transformStyle: "preserve-3d"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "perspective(1000px) rotateX(0deg) translateY(-10px) scale(1.02)";
-                      e.currentTarget.style.boxShadow = "0 40px 120px rgba(0,0,0,0.4), 0 20px 60px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.15)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "perspective(1000px) rotateX(2deg) translateY(0) scale(1)";
-                      e.currentTarget.style.boxShadow = "0 30px 90px rgba(0,0,0,0.3), 0 15px 40px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,0.1)";
-                    }}
-                  >
-                    <div 
-                      style={{
-                        position: "absolute",
-                        top: "-2px",
-                        left: "-2px",
-                        right: "-2px",
-                        bottom: "-2px",
-                        background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #4facfe)",
-                        borderRadius: "24px",
-                        zIndex: -1,
-                        opacity: 0.6,
-                        filter: "blur(20px)"
-                      }}
-                    ></div>
-                    <video 
-                      muted 
-                      autoPlay 
-                      loop 
-                      playsInline
-                      controls
-                      style={{ 
-                        width: "100%", 
-                        height: "auto", 
-                        display: "block",
-                        maxHeight: "600px",
-                        objectFit: "contain",
-                        backgroundColor: "#000",
-                        position: "relative",
-                        zIndex: 1
-                      }}
-                    >
-                      <source src="/assets/videos/pp-demo-video.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
+                  <Video3DWrapper />
                 </div>
               </div>
             </div>
