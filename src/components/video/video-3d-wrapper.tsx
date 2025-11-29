@@ -28,7 +28,7 @@ const Video3DWrapper = () => {
   return (
     <div 
       ref={wrapperRef}
-      className="video-wrapper" 
+      className={`video-wrapper ${isVisible ? 'video-fall-animation' : ''}`}
       style={{ 
         borderRadius: "24px", 
         overflow: "hidden", 
@@ -36,13 +36,9 @@ const Video3DWrapper = () => {
         border: "4px solid rgba(255,255,255,0.2)",
         background: "linear-gradient(145deg, #1a1a1a, #000)",
         position: "relative",
-        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-        transform: isVisible 
-          ? "perspective(1000px) rotateX(2deg) translateY(0)" 
-          : "perspective(1000px) rotateX(15deg) translateY(-100vh) scale(0.8)",
         transformStyle: "preserve-3d",
-        opacity: isVisible ? 1 : 0,
-        animation: isVisible ? "fallDown 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards" : "none"
+        transform: "perspective(1000px) rotateX(2deg) translateY(0)",
+        transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
       }}
       onMouseEnter={(e) => {
         if (isVisible) {
