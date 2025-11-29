@@ -99,7 +99,7 @@ const SmartChairPage = () => {
           <div 
             className="video-section pt-80 pb-80 lg-pt-60 lg-pb-60" 
             style={{ 
-              background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+              background: "linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
               position: "relative",
               overflow: "hidden"
             }}

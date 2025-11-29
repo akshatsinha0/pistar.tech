@@ -32,11 +32,11 @@ const Video3DWrapper = () => {
           left: "-2px",
           right: "-2px",
           bottom: "-2px",
-          background: "linear-gradient(45deg, #667eea, #764ba2, #f093fb, #4facfe)",
+          background: "linear-gradient(45deg, #7fffd4, #40e0d0, #00fa9a, #3cb371)",
           borderRadius: "24px",
           zIndex: -1,
-          opacity: 0.6,
-          filter: "blur(20px)"
+          opacity: 0.5,
+          filter: "blur(25px)"
         }}
       ></div>
       <video 
